@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load widget_tweaks %}
+{% block title %} {% trans 'Profile' %} {% endblock %}
+{% block block_for_css %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auth_reg.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1 style="text-align: center">{% trans 'Profile' %} {{ user.username }}</h1>
+    <div class="profile_block">
+        <form action="" method="post" class="profile_form">
+            {% csrf_token %}
+            {{ form.first_name|add_class:"profile_field" }}
+            {{ form.last_name|add_class:"profile_field" }}
+            <button style="background: #9FC53A; color: white; padding: 5px; border-radius: 5px; height: 3em;">{% trans 'Save changes' %}
+            </button>
+        </form>
+        <a href="{% url 'change_password' %}" style="background: #9FC53A; color: white; padding: 5px; border-radius: 5px; height: 2em;text-align: center; width: 8em; margin-top: 5em">{% trans 'Change password' %}
+            </a>
+    </div>
+{% endblock %}
+
+

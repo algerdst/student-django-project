@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-08 10:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%"
+"100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\catalog\templates\catalog\index.html:16
+msgid "Projects catalog"
+msgstr "Каталог проектов"
+
+#: .\templates\base.html:33
+msgid "Set"
+msgstr "Установить"
+
+#: .\templates\base.html:37
+msgid "Admin panel"
+msgstr "Админ панель"
+
+#: .\templates\base.html:39 .\users\templates\users\profile.html:5
+#: .\users\templates\users\profile.html:13
+msgid "Profile"
+msgstr "Профиль"
+
+#: .\templates\base.html:40
+msgid "Log out"
+msgstr "Выйти"
+
+#: .\templates\base.html:42 .\users\templates\users\authorization.html:31
+msgid "Log in"
+msgstr "Войти"
+
+#: .\templates\base.html:43
+msgid "Sign in"
+msgstr "Зарегистрироваться"
+
+#: .\users\templates\users\authorization.html:6
+#: .\users\templates\users\authorization.html:23
+msgid "Authorization"
+msgstr "Авторизация"
+
+#: .\users\templates\users\authorization.html:27
+#: .\users\templates\users\registration.html:37
+msgid "Username"
+msgstr "Юзернейм"
+
+#: .\users\templates\users\authorization.html:29
+#: .\users\templates\users\registration.html:41
+#, fuzzy
+#| msgid "Password changing"
+msgid "Password"
+msgstr "Изменить пароль"
+
+#: .\users\templates\users\authorization.html:36
+msgid "Do you need an account? Let`s register now"
+msgstr "Нужен аккаунт? Зарегистрируйтесь прямо сейчас"
+
+#: .\users\templates\users\password_change.html:13
+msgid "Password changing"
+msgstr "Изменить пароль"
+
+#: .\users\templates\users\password_change.html:16
+msgid "Enter old password"
+msgstr "Введите старый пароль"
+
+#: .\users\templates\users\password_change.html:18
+msgid "Enter your new password"
+msgstr "Введите новый пароль"
+
+#: .\users\templates\users\password_change.html:20
+msgid "Repeat your new password"
+msgstr "Повторите новый пароль"
+
+#: .\users\templates\users\password_change.html:22
+#: .\users\templates\users\profile.html:19
+msgid "Save changes"
+msgstr "Сохранить изменения"
+
+#: .\users\templates\users\profile.html:22
+msgid "Change password"
+msgstr "Изменить пароль"
+
+#: .\users\templates\users\registration.html:29
+#: .\users\templates\users\registration.html:45
+msgid "Registration"
+msgstr "Регистрация"
+
+#: .\users\templates\users\registration.html:33
+msgid "First name"
+msgstr "Имя"
+
+#: .\users\templates\users\registration.html:35
+msgid "Last name"
+msgstr "Фамилия"
+
+#: .\users\templates\users\registration.html:39
+msgid "Email"
+msgstr "Почта"
+
+#: .\users\templates\users\registration.html:43
+msgid "Repeat"
+msgstr "Повторите пароль"
+
+#: .\users\templates\users\registration.html:50
+msgid "If you`re already have an account, Log in"
+msgstr "Если у вас уже есть аккаунт, войдите"
+
+#, fuzzy
+#~| msgid "Do you need an account? Let`s register now"
+#~ msgid " Log in"
+#~ msgstr "Нужен аккаунт? Зарегистрируйтесь прямо сейчас"
+
+#~ msgid "moskvich"
+#~ msgstr "москвич"
+
+#, fuzzy
+#~| msgid "Repeat your new password"
+#~ msgid "Repeat password"
+#~ msgstr "Повторите новый пароль"

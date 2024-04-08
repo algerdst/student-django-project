@@ -1,0 +1,55 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    {% block block_for_css %}
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    {% endblock %}
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="ЛОГО"
+                                        style="width: 150px ; height: 150px;"></a>
+        {% block search_field %}
+        {% endblock %}
+        <div class="header_nav">
+            <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+    <input name="next" type="hidden" value="{{ redirect_to }}">
+    <select name="language">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                {{ language.name_local }} ({{ language.code }})
+            </option>
+        {% endfor %}
+    </select>
+    <input type="submit" value={% trans 'Set' %}>
+</form>
+            {% if user.is_authenticated %}
+                {% if user.is_superuser %}
+                    <a class="in_cart_button" style="font-size: 0.8em; background: red" href="/admin">{% trans 'Admin panel' %}</a>&nbsp|&nbsp
+                {% endif %}
+                <a class="nav_link" href="{% url 'profile' %}" style="margin-right: 0">{% trans 'Profile' %}</a>|&nbsp
+                <a class="nav_link" href="{% url 'logout' %}">{% trans 'Log out' %}</a>
+            {% else %}
+                <a class="nav_link" href="{% url 'authorization' %}">{% trans 'Log in' %}</a>|&nbsp
+                <a class="nav_link" href="{% url 'registration' %}">{% trans 'Sign in' %}</a>
+            {% endif %}
+        </div>
+    </header>
+    {% block content %}
+
+    {% endblock %}
+    <footer>
+
+    </footer>
+</div>
+</body>
+</html>

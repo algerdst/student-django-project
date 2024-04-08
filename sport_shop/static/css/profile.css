@@ -1,0 +1,19 @@
+.profile_block{
+    max-width: 50%;
+    margin: auto;
+    min-height: 15em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.profile_field{
+    height: 2em;
+    margin-bottom: 1em;
+}

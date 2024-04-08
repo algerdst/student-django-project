@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Главная{% endblock %}
+{% load widget_tweaks %}
+{% load i18n %}
+
+
+{% block search_field %}
+    <form action="" method="get" style="width: 70%; margin: auto">
+        {{ form.search|add_class:'search_field' }}
+    </form>
+{% endblock %}
+
+{% block content %}
+    <div class="pop_categories">
+        <h1>{% trans 'Projects catalog' %}</h1>
+    </div>
+    <div class="wrap">
+        <div class="products">
+            {% for project in projects %}
+                <div class="product">
+                    <a href="{% url 'product' slug=project.slug %}"><img src="{{ project.image.url }}" alt="" class="product_img"></a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

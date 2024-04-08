@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    {{ project.name }}
+{% endblock %}
+{% block block_for_css %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1 style="text-align: center">{{project.name}}</h1>
+{% endblock %}
